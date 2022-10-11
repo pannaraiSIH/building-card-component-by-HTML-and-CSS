@@ -1,0 +1,155 @@
+/*-----font-family: 'Fraunces', serif;
+font-family: 'Montserrat', sans-serif;--------*/
+
+
+/*---------Global-------------*/
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: hsl(30, 38%, 92%);
+	font-family: 'Montserrat', sans-serif;
+	font-size: 14px;
+	color: hsl(228, 12%, 48%);
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+}
+
+
+/*---------Product card-------------*/
+.content-wrap {
+	margin: 30px auto;
+	padding: 0 30px;
+}
+
+.grid {
+	display: grid;
+	max-width: 700px;
+	grid-template-columns: 1fr 1fr;
+	background-color: hsl(0, 0%, 100%);
+	border-radius: 15px;
+	overflow: hidden;
+}
+
+.product-img img {
+	max-width: 100%;
+	display: inherit;
+}
+
+.product-details {
+	padding: 35px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.product-details h6 {
+	font-size: 13px;
+	letter-spacing: 4px;
+	text-transform: uppercase;
+	color: hsl(228, 12%, 48%);
+	font-weight: 500;
+}
+
+.product-details h1 {
+	font-family: 'Fraunces', serif;
+	color: hsl(212, 21%, 14%);
+	font-size: 35px;
+	line-height: 1em;
+}
+
+.product-details .description {
+	line-height: 1.6em;
+}
+
+.prices {
+	display: flex;
+	align-items: center;
+}
+
+.current-price {
+	font-family: 'Fraunces', serif;
+	color: hsl(158, 36%, 37%);
+	font-size: 30px;
+	padding-right: 20px;
+}
+
+.old-price {
+	text-decoration: line-through;
+}
+
+button {
+	background-color: hsl(158, 36%, 37%);
+	color: white;
+	font-size: 15px;
+	border: none;
+	padding: 10px 0;
+	border-radius: 10px;
+	font-weight: 700;
+	cursor: pointer;
+	transition: background-color .3s ease;
+	width: 100%;
+}
+
+button img {
+	padding-right: 10px;
+}
+
+button:hover {
+	background-color: hsl(158, 36%, 25%);
+}
+
+/*-------Responsive------*/
+@media screen and (max-width: 630px) {
+	.grid {
+		grid-template-columns: 1fr;
+	}
+	.product-img img {
+		max-height: 450px;
+		width: 100%;
+		object-fit: cover;
+	}
+	.product-details {
+		display: block;
+	}
+	h6, h1, .description, .prices {
+		padding-bottom: 13px;
+	}
+}
+
+@media screen and (max-width: 375px) {
+	.content-wrap {
+		margin: 15px auto;
+		padding: 0 15px;
+	}
+	.product-img img {
+		max-height: 290px;
+	}
+	.product-details {
+		padding: 20px;
+	}
+	h6, h1, .description, .prices {
+		padding-bottom: 11px;
+	}
+	.product-details h1 {
+		font-size: 30px;
+	}
+	.product-details .description {
+		font-size: 12px;
+	}
+	.current-price {
+		font-size: 25px;
+	}
+	button {
+		padding: 11px 0;
+		font-size: 13px;
+	}
+}
+
+
+
+
